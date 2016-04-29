@@ -1,0 +1,18 @@
+{
+  "name": "crashfortstudios/shipstation-php-sdk",
+  "description": "Shipstation SDK is a very quick and simple SDK for the shipstation platform",
+  "minimum-stability": "alpha",
+  "license": "apache",
+  "autoload": {
+    "psr-4": {"Shipstation\\": "src/"}
+  },
+  "authors": [
+    {
+      "name": "Lewis Lancaster",
+      "email": "hackerman@zyon.io"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9"
+  }
+}
