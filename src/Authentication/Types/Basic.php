@@ -4,14 +4,14 @@ namespace Shipstation\Authentication\Types;
 /**
  * Lewis Lancaster 2016
  *
- * Class Api
+ * Class Basic
  *
  * @package Shipstation\Authentication\Types
  */
 
 use Shipstation\Authentication\Structures\Authenticator;
 
-class Api implements Authenticator
+class Basic implements Authenticator
 {
 
     /**

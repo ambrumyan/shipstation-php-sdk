@@ -3,11 +3,11 @@
 require_once "../vendor/autoload.php";
 
 use Shipstation\Orders\Get;
-use Shipstation\Authentication\Types\Api;
+use Shipstation\Authentication\Types\Basic;
 
-$api = new Api("apikey","apisecret");
+$authenticator = new Basic("apikey","apisecret");
 
-$get = new Get( $api );
+$get = new Get( $authenticator );
 
 $get->setSearchParameters( array(
     "orderStatus" => 'awaiting_shipment'
