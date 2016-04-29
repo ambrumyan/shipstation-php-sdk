@@ -85,7 +85,7 @@ class Get
      * @return string
      */
 
-    public function getOrder()
+    public function getOrders()
     {
 
         $request = new Request();
@@ -114,7 +114,35 @@ class Get
             throw new OrderException();
         }
 
-        return $result;
+        return json_decode( $result, true );
+    }
+
+    /**
+     * Gets the first order, or if the index is not null, returns that index.
+     *
+     * @param null $index
+     *
+     * @return mixed
+     */
+
+    public function getOrder( $index=null )
+    {
+
+        $result = $this->getOrders();
+
+        if( empty( $result ) )
+        {
+
+            throw new OrderException();
+        }
+
+        if( $index !== null )
+        {
+
+            return $result["orders"][ $index ];
+        }
+
+        return reset( $result["orders"] );
     }
 
     /**
